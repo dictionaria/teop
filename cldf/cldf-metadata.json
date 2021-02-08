@@ -5,10 +5,39 @@
             "@language": "en"
         }
     ],
+    "dc:bibliographicCitation": "Mosel, Ulrike. 2019. A multifunctional Teop-English dictionary.  Dictionaria 4. 1-6488. DOI: 10.5281/zenodo.3257580 (Available online at https://dictionaria.clld.org/contributions/teop, Accessed on 2021-02-08.)",
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Dictionary",
     "dc:creator": "Ulrike Mosel",
     "dc:identifier": "https://dictionaria.clld.org/contributions/teop",
+    "dc:license": "CC-BY 4.0",
     "dc:title": "A multifunctional Teop-English dictionary",
+    "dcat:accessURL": "git@github.com:dictionaria/teop",
+    "prov:wasDerivedFrom": [
+        {
+            "rdf:type": "prov:Entity",
+            "dc:title": "Repository",
+            "rdf:about": "git@github.com:dictionaria/teop",
+            "dc:created": "v1.0-2-g6e4f37e"
+        },
+        {
+            "rdf:type": "prov:Entity",
+            "dc:title": "Glottolog",
+            "rdf:about": "https://github.com/glottolog/glottolog",
+            "dc:created": "v4.3-treedb-fixes"
+        }
+    ],
+    "prov:wasGeneratedBy": [
+        {
+            "dc:title": "python",
+            "dc:description": "3.8.5"
+        },
+        {
+            "dc:title": "python-packages",
+            "dc:relation": "requirements.txt"
+        }
+    ],
+    "rdf:ID": "teop",
+    "rdf:type": "http://www.w3.org/ns/dcat#Distribution",
     "dialect": {
         "commentPrefix": null
     },
@@ -52,37 +81,39 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Gloss",
-                        "titles": "gloss"
+                        "name": "Gloss"
                     },
                     {
                         "datatype": "string",
-                        "name": "MWE_Structure",
-                        "titles": "MWE structure"
-                    },
-                    {
-                        "datatype": "string",
-                        "separator": " ; ",
-                        "name": "Main_Entry",
-                        "titles": "main entry"
+                        "name": "MWE_Structure"
                     },
                     {
                         "datatype": "string",
                         "separator": " ; ",
-                        "name": "Media_IDs"
+                        "name": "Main_Entry"
                     },
                     {
                         "datatype": "string",
-                        "name": "Morphology",
-                        "titles": "morphology"
+                        "name": "Morphology"
                     },
                     {
                         "datatype": "string",
                         "name": "Variant_Form",
-                        "titles": "variant form"
+                        "titles": "Variant Form(s)"
                     }
                 ],
                 "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
                     {
                         "columnReference": [
                             "Entry_IDs"
@@ -100,28 +131,6 @@
                         ],
                         "reference": {
                             "resource": "entries.csv",
-                            "columnReference": [
-                                "ID"
-                            ]
-                        }
-                    },
-                    {
-                        "columnReference": [
-                            "Media_IDs"
-                        ],
-                        "reference": {
-                            "resource": "media.csv",
-                            "columnReference": [
-                                "ID"
-                            ]
-                        }
-                    },
-                    {
-                        "columnReference": [
-                            "Language_ID"
-                        ],
-                        "reference": {
-                            "resource": "languages.csv",
                             "columnReference": [
                                 "ID"
                             ]
@@ -162,13 +171,12 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Comment",
-                        "titles": "comment"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "name": "Comment"
                     },
                     {
                         "datatype": "string",
-                        "name": "Grammar_Comment",
-                        "titles": "grammar comment"
+                        "name": "Grammar_Comment"
                     },
                     {
                         "datatype": "string",
@@ -177,18 +185,16 @@
                     },
                     {
                         "datatype": "string",
+                        "name": "Scientific_Name"
+                    },
+                    {
+                        "datatype": "string",
                         "name": "Semantic_Domain"
                     },
                     {
                         "datatype": "string",
                         "separator": " ; ",
-                        "name": "Synonym",
-                        "titles": "synonyme"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "alt_translation2",
-                        "titles": "scientific name"
+                        "name": "Synonym"
                     }
                 ],
                 "foreignKeys": [
@@ -297,26 +303,10 @@
                     {
                         "datatype": "string",
                         "separator": " ; ",
-                        "name": "Media_IDs"
-                    },
-                    {
-                        "datatype": "string",
-                        "separator": " ; ",
                         "name": "Sense_IDs"
                     }
                 ],
                 "foreignKeys": [
-                    {
-                        "columnReference": [
-                            "Media_IDs"
-                        ],
-                        "reference": {
-                            "resource": "media.csv",
-                            "columnReference": [
-                                "ID"
-                            ]
-                        }
-                    },
                     {
                         "columnReference": [
                             "Language_ID"
@@ -338,6 +328,17 @@
                                 "ID"
                             ]
                         }
+                    },
+                    {
+                        "columnReference": [
+                            "Sense_IDs"
+                        ],
+                        "reference": {
+                            "resource": "senses.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
                     }
                 ],
                 "primaryKey": [
@@ -351,11 +352,16 @@
             "tableSchema": {
                 "columns": [
                     {
-                        "datatype": "string",
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
                         "name": "ID"
                     },
                     {
                         "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
                         "name": "Language_ID"
                     },
                     {
@@ -367,18 +373,36 @@
                         "name": "URL"
                     },
                     {
+                        "datatype": "string",
                         "name": "mimetype"
                     },
                     {
                         "datatype": "integer",
                         "name": "size"
                     }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
                 ]
             },
             "url": "media.csv"
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
+            "dc:extent": 1,
             "tableSchema": {
                 "columns": [
                     {
