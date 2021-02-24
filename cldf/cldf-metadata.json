@@ -17,7 +17,7 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "git@github.com:dictionaria/teop",
-            "dc:created": "v1.0-2-g6e4f37e"
+            "dc:created": "v1.0-7-gd89305a"
         },
         {
             "rdf:type": "prov:Entity",
