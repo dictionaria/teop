@@ -3,11 +3,11 @@
 > by Ulrike Mosel
 
 This repository contains the data underlying the published version of the dictionary
-at [Dictionaria](https://dictionaria.clld.org/contributions/teop) as [CLDF](https://cldf.clld.org) 
-[Dictionary](cldf) 
+at [Dictionaria](https://dictionaria.clld.org/contributions/teop) as [CLDF](https://cldf.clld.org)
+[Dictionary](cldf)
 [![CLDF validation](https://github.com/dictionaria/teop/workflows/CLDF-validation/badge.svg)](https://github.com/dictionaria/teop/actions?query=workflow%3ACLDF-validation)
 
-Releases of this repository are archived with and accessible through 
+Releases of this repository are archived with and accessible through
 [ZENODO](https://zenodo.org/communities/dictionaria) and the latest release
 is published on the [Dictionaria website](https://dictionaria.clld.org).
 
@@ -35,7 +35,7 @@ Table 2: Content of this dictionary
 <tbody>
 <tr><td>Dialect</td><td>Coastal dialect</td></tr>
 <tr><td>Size</td><td>6488 entries; 6417 entries with example sentences and/or encyclopaedic descriptions in Teop with English translations; 1641 entries with illustrations</td></tr>
-<tr><td>Types information that can be searched for separately or in combination (see <a href="#multifunctionality">§3</a>)</td>
+<tr><td>Types information that can be searched for separately or in combination (see <a href="#multifunctionality">the multifunctionality of the Teop-English dictionary</a>)</td>
 <td><u>headword</u>: single words, multiword expressions, and clitic constructions are represented in their orthographical forms found in texts; variant forms are represented as separate headwords, e.g. vuuvua, vuvua; words whose final vowel may be dropped are represented in their long form;
 <br/>
 <u>part of speech</u>: classification headwords, i.e. of single words and multi- word expressions (MWEs);
@@ -51,13 +51,13 @@ Table 2: Content of this dictionary
 <u>morphology &amp; gloss</u>: morphological analysis with glosses of complex words, multi-word expressions and clitic constructions;
 <br/>
 <u>scientific names</u> of fishes, shellfish, and plants.</td></tr>
-<tr><td>Documentary evidence</td><td>Examples taken from the Teop Language Corpus are identified by the label (ID) of the text and the number of the annotation (see <a href="#sources">§5</a>)</td></tr>
+<tr><td>Documentary evidence</td><td>Examples taken from the Teop Language Corpus are identified by the label (ID) of the text and the number of the annotation (see <a href="#sources">the sources of Teop descriptions and example sentences</a>)</td></tr>
 </tbody>
 </table>
 
 In addition, there are 578 entries that contain comments on language use and grammatical issues.
 
-The identification of English and scientific names of marine creatures is based on Allen et al. 2003, Dance 2000 and various web sites (see <a href="#references">§9</a>), but to what extent the Teop names denote species or families in a scientific sense has not been investigated. The scientific names of plants were listed by Owen Kasinori.
+The identification of English and scientific names of marine creatures is based on Allen et al. 2003, Dance 2000 and various web sites (see <a href="#references">References</a>), but to what extent the Teop names denote species or families in a scientific sense has not been investigated. The scientific names of plants were listed by Owen Kasinori.
 
 <h2 id="multifunctionality">The multifunctionality of the Teop-English dictionary</h2>
 
@@ -262,7 +262,7 @@ Mosel, Ulrike. 2012a. Morphosyntactic analysis in the field; a guide to the guid
 
 Mosel, Ulrike. 2012b. Creating educational materials in language documentation projects -- creating innovative resources for linguistic research. In Frank Seifart, Geoffrey Haig, Nikolaus P. Himmelmann, Dagmar Jung, Anna Margetts, and Paul Trilsbeek (eds.) _Potentials of Language Documentation: Methods, Analyses, and Utilization_. Language Documentation &amp; Conservation Special Publication No. 3, Hawaii: University of Hawai'i at Manoa, pp. 111-117. [https://scholarspace.manoa.hawaii.edu/bitstream/10125/4524/15mosel.pdf](https://scholarspace.manoa.hawaii.edu/bitstream/10125/4524/15mosel.pdf)  (accessed June 2019)
 
-Mosel, Ulrike. 2014. Type shifts of nouns under determination in Teop, an Oceanic language of Bougainville, Papua New Guinea. In Doris Gerland, Christian Horn, Anja Latrouite &amp; Albert Ortmann (eds.). _Meaning and Grammar of Nouns and Verbs_. Düsseldorf: dup, pp. 49-75. [http://dup.oa.hhu.de/9/1/Beitrag03-Mosel.pdf](http://dup.oa.hhu.de/9/1/Beitrag03-Mosel.pdf)  (accessed June 2019)
+Mosel, Ulrike. 2014. Type shifts of nouns under determination in Teop, an Oceanic language of Bougainville, Papua New Guinea. In Doris Gerland, Christian Horn, Anja Latrouite &amp; Albert Ortmann (eds.). _Meaning and Grammar of Nouns and Verbs_. Düsseldorf: dup, pp. 49-75. [https://dup.oa.hhu.de/9/1/Beitrag03-Mosel.pdf](https://dup.oa.hhu.de/9/1/Beitrag03-Mosel.pdf)  (accessed June 2019)
 
 Mosel, Ulrike. 2015. Putting oral narratives into writing - experiences from a language documentation project in Bougainville, Papua New Guinea. In Bernard Comrie and Lucía Golluscio (eds). _Language Contact and Documentation. Contacto lingüístico y documentación_. Berlin, Munich, Boston: de Gruyter Mouton, pp.321-342.
 
@@ -293,11 +293,11 @@ Schoffner, Robert Kirk. 1976. _The economy and cultural ecology of Teop : an ana
 
 <h3 id="web">Websites (accessed June 2019)</h3>
 
-[http://www.britannica.com/](http://www.britannica.com/)
+[https://www.britannica.com/](https://www.britannica.com/)
 
-[http://www.fishbase.org/](http://www.fishbase.org/)
+[https://www.fishbase.org/](https://www.fishbase.org/)
 
-_Useful Tropical Plants_: [http://tropical.theferns.info/](http://tropical.theferns.info/)
+_Useful Tropical Plants_: [https://tropical.theferns.info/](https://tropical.theferns.info/)
 
 [https://en.wikipedia.org/wiki/](https://en.wikipedia.org/wiki/)
 
@@ -544,9 +544,9 @@ Aro 15R
 </tbody>
 </table>
 <h3 id="references-appendix">References</h3>
-Saovana-Spriggs, Ruth. 1987. _Teop Primer 1._ Department of North Solomons Province, Division of Education, Arawa, N.S.P., Papua New Guinea.
+Saovana-Spriggs, Ruth. 1987. _Teop Primer 1_. Department of North Solomons Province, Division of Education, Arawa, N.S.P., Papua New Guinea.
 
-Saovana-Spriggs, Ruth and Marjotie Dubert. 1988. _Teop Primer 4._ Department of North Solomons Province, Division of Education, Arawa, N.S.P., Papua New Guinea.
+Saovana-Spriggs, Ruth and Marjotie Dubert. 1988. _Teop Primer 4_. Department of North Solomons Province, Division of Education, Arawa, N.S.P., Papua New Guinea.
 
 Spriggs, Ruth. n.d. _Teop Primer 5_. Department of North Solomons Province, Division of Education, Arawa, N.S.P., Papua New Guinea.
 

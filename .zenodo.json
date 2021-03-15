@@ -1,0 +1,29 @@
+{
+    "title": "dictionaria/teop: A multifunctional Teop-English dictionary",
+    "access_right": "open",
+    "keywords": [
+        "cldf:Dictionary",
+        "linguistics"
+    ],
+    "creators": [
+        {
+            "name": "Ulrike Mosel"
+        }
+    ],
+    "communities": [
+        {
+            "identifier": "cldf-datasets"
+        },
+        {
+            "identifier": "clld"
+        },
+        {
+            "identifier": "dictionaria"
+        }
+    ],
+    "upload_type": "dataset",
+    "license": {
+        "id": "CC-BY-4.0"
+    },
+    "description": "Mosel, Ulrike. 2019. A multifunctional Teop-English dictionary.  Dictionaria 4. 1-6488. DOI: 10.5281/zenodo.3257580 (Available online at https://dictionaria.clld.org/contributions/teop, Accessed on 2021-02-08.)"
+}
