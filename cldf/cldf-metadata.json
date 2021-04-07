@@ -9,7 +9,7 @@
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Dictionary",
     "dc:creator": "Ulrike Mosel",
     "dc:identifier": "https://dictionaria.clld.org/contributions/teop",
-    "dc:license": "CC-BY 4.0",
+    "dc:license": "https://creativecommons.org/licenses/by/4.0/",
     "dc:title": "A multifunctional Teop-English dictionary",
     "dcat:accessURL": "git@github.com:dictionaria/teop",
     "prov:wasDerivedFrom": [
@@ -17,7 +17,7 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "git@github.com:dictionaria/teop",
-            "dc:created": "v1.0-9-g3a59bd8"
+            "dc:created": "v1.0-10-ge9cad77"
         },
         {
             "rdf:type": "prov:Entity",
