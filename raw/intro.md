@@ -18,7 +18,6 @@ Most speakers are literate in Teop, all of them are bilingual in Teop and Tok Pi
 <h2 id="content">Content</h2>
 
 Table 2: Content of this dictionary
-Table 2: Content of this dictionary
 <table table class="table table-bordered">
 <tbody>
 <tr><td>Dialect</td><td>Coastal dialect</td></tr>
@@ -159,7 +158,7 @@ Table 7: Part-of-speech classification of single words and MWEs
 <tr><td>INTERJECTION</td><td></td></tr>
 <tr><td>INTERROGATIVE CONSTR</td><td>a construction that consists of an interrogative adverb and an additional element like an adverb, preposition or relative clause</td></tr>
 <tr><td>LINKER</td><td>a word that links modifiers of a variety of forms to nouns and verbs or functions as a predicate marked for tense and aspect</td></tr>
-<tr><td>LINKER CONSTR</td><td>a construction headed by the linker</td>
+<tr><td>LINKER CONSTR</td><td>a construction headed by the linker</td></tr>
 <tr><td>N1</td><td>noun of the 1st class marked by articles of the first class</td></tr>
 <tr><td>N1.CONSTR</td><td>a construction that can substitute for a noun of the 1st class in the formation of a noun phrase</td></tr>
 <tr><td>N1/N2.CONSTR</td><td>a construction that can substitute for a noun of the 1st and 2nd class in the formation of a noun phrase</td></tr>
