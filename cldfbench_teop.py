@@ -1,11 +1,41 @@
 from collections import ChainMap
 import pathlib
 import re
+import mimetypes
+import copy
 
 from pydictionaria.sfm_lib import Database as SFM, Entry
 from pydictionaria import sfm2cldf
 
 from cldfbench import CLDFSpec, Dataset as BaseDataset
+
+MEDIA = '21628368'
+
+
+def iter_media(media, catalog, checksums):
+    checksums = {(r['objid'], r['fname']): r['md5'] for r in checksums}
+
+    for m in media:
+        m = dict(m)
+        comps = m['Download_URL'].unsplit().split('/')
+        objid, fname = comps[-2:]
+        fname = pathlib.Path(fname)
+        ext = mimetypes.guess_extension(m['Media_Type'])
+        assert ext in {'.jpg', '.tiff'}
+        m.update(
+            ID=checksums[objid, fname.name],
+            Name=f"{checksums[objid, fname.name]}{ext}",
+            Download_URL=f'https://zenodo.org/records/{MEDIA}/files/media_{objid[6]}.zip',
+            Path_In_Zip=f'media/{objid[:7]}/{objid}/{fname.name}',
+        )
+        yield m
+        for derived in ['web.jpg', 'thumbnail.jpg']:
+            d = copy.copy(m)
+            d.update(
+                ID=checksums[objid, derived],
+                Name=f"{checksums[objid, derived]}.jpg",
+                Path_In_Zip=f'media/{objid[:7]}/{objid}/{derived}')
+            yield d
 
 
 LX_PATTERN = re.compile('(?P<lx>[^0-9]+)(?P<hm>[0-9]+)$')
@@ -97,10 +127,7 @@ class Dataset(BaseDataset):
 
         examples = sfm2cldf.load_examples(self.raw_dir / 'examples.sfm')
 
-        if (self.etc_dir / 'cdstar.json').exists():
-            media_catalog = self.etc_dir.read_json('cdstar.json')
-        else:
-            media_catalog = {}
+        media_catalog = self.etc_dir.read_json('cdstar.json')
 
         # preprocessing
 
@@ -122,6 +149,8 @@ class Dataset(BaseDataset):
                 cldf_log=cldf_log)
 
             # good place for some post-processing
+            media = list(
+                iter_media(media, media_catalog, self.etc_dir.read_csv('md5sums.csv', dicts=True)))
 
             # cldf schema
 

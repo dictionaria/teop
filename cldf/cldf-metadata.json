@@ -5,7 +5,7 @@
             "@language": "en"
         }
     ],
-    "dc:bibliographicCitation": "Mosel, Ulrike. 2019. A multifunctional Teop-English dictionary.  Dictionaria 4. 1-6488. DOI: 10.5281/zenodo.3257580 (Available online at https://dictionaria.clld.org/contributions/teop, Accessed on 2021-02-08.)",
+    "dc:bibliographicCitation": "Mosel, Ulrike. 2019. A multifunctional Teop-English dictionary.  Dictionaria 4. 1-6488. (Available online at https://dictionaria.clld.org/contributions/teop, Accessed on 2021-02-08.)",
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Dictionary",
     "dc:creator": "Ulrike Mosel",
     "dc:identifier": "https://dictionaria.clld.org/contributions/teop",
@@ -16,20 +16,20 @@
         {
             "rdf:about": "https://github.com/dictionaria/teop",
             "rdf:type": "prov:Entity",
-            "dc:created": "v1.1-2-g60bb372",
+            "dc:created": "v1.2-2-g5a9c394",
             "dc:title": "Repository"
         },
         {
             "rdf:about": "https://github.com/glottolog/glottolog",
             "rdf:type": "prov:Entity",
-            "dc:created": "v4.4",
+            "dc:created": "v5.3",
             "dc:title": "Glottolog"
         }
     ],
     "prov:wasGeneratedBy": [
         {
             "dc:title": "python",
-            "dc:description": "3.8.10"
+            "dc:description": "3.12.3"
         },
         {
             "dc:title": "python-packages",
@@ -38,9 +38,6 @@
     ],
     "rdf:ID": "teop",
     "rdf:type": "http://www.w3.org/ns/dcat#Distribution",
-    "dialect": {
-        "commentPrefix": null
-    },
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#EntryTable",
@@ -181,7 +178,7 @@
                         "name": "Grammar_Comment"
                     },
                     {
-                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaReference",
                         "separator": " ; ",
                         "name": "Media_IDs"
                     },
@@ -206,6 +203,17 @@
                         ],
                         "reference": {
                             "resource": "entries.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Media_IDs"
+                        ],
+                        "reference": {
+                            "resource": "media.csv",
                             "columnReference": [
                                 "ID"
                             ]
@@ -275,7 +283,7 @@
                         "datatype": "string",
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#analyzedWord",
                         "required": false,
-                        "separator": "\\t",
+                        "separator": "\t",
                         "name": "Analyzed_Word"
                     },
                     {
@@ -284,7 +292,7 @@
                         "datatype": "string",
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#gloss",
                         "required": false,
-                        "separator": "\\t",
+                        "separator": "\t",
                         "name": "Gloss"
                     },
                     {
@@ -302,6 +310,17 @@
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference",
                         "required": false,
                         "name": "Meta_Language_ID"
+                    },
+                    {
+                        "dc:description": "The level of conformance of the example with the Leipzig Glossing Rules",
+                        "dc:extent": "singlevalued",
+                        "datatype": {
+                            "base": "string",
+                            "format": "WORD_ALIGNED|MORPHEME_ALIGNED"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lgrConformance",
+                        "required": false,
+                        "name": "LGR_Conformance"
                     },
                     {
                         "datatype": "string",
@@ -362,7 +381,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#MediaTable",
-            "dc:extent": 1416,
+            "dc:extent": 4248,
             "tableSchema": {
                 "columns": [
                     {
@@ -387,7 +406,10 @@
                         "name": "Description"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": {
+                            "base": "string",
+                            "format": "[^/]+/.+"
+                        },
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaType",
                         "required": true,
                         "name": "Media_Type"
@@ -397,6 +419,12 @@
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#downloadUrl",
                         "required": false,
                         "name": "Download_URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#pathInZip",
+                        "required": false,
+                        "name": "Path_In_Zip"
                     },
                     {
                         "datatype": "string",
@@ -480,7 +508,7 @@
                         },
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
                         "required": false,
-                        "valueUrl": "http://glottolog.org/resource/languoid/id/{glottocode}",
+                        "valueUrl": "http://glottolog.org/resource/languoid/id/{Glottocode}",
                         "name": "Glottocode"
                     },
                     {
